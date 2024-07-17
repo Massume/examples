@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import bem from 'src/utils/bem';
+import bem from '../../utils/bem';
 import styles from './index.module.scss';
 
 const b = bem('middle-block-main-product-art-info', styles);

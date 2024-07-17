@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 // utils
-import useMobileStyle from 'src/utils/useMobileStyle';
-import bem from 'src/utils/bem';
+import useMobileStyle from './utils/useMobileStyle';
+import bem from './utils/bem';
 
 // actions
 import {
@@ -133,20 +133,8 @@ const OrderCheckoutCard = (props) => {
       return acc;
     }, 0);
 
-    const someProductExampleOneFullSumm = newData.reduce((acc, orderItem, indexItem) => {
-      const {imagesExampleOneChildrens} = orderItem;
-      if (imagesExampleOneChildrens && imagesExampleOneChildrens.length) {
-        return acc;
-      }
-      if (item.images && item.images.some(image => image === orderItem.exampleOneImageId || index === indexItem)) {
-        return acc + Number(orderItem.fullSumm);
-      }
-      return acc;
-    }, 0);
-
     const someProductExampleOne = newData.reduce((acc, orderItem, idx) => {
       //some code was here
-      
       // default return;
       return acc;
     }, {});
@@ -174,36 +162,10 @@ const OrderCheckoutCard = (props) => {
     return inc ? 1 : -1;
   }
 
-
   // set in local storage order status to edit
   const setEditStatus = () => {
     localStorage.setItem('editOrder', JSON.stringify(true));
   }
-
-  // change order item quantity by buttons
-  const changeCount = (item) => {
-    const {
-      isAdd, // false
-      typeProduct,
-      itemId, // item.id = 5
-      key,
-      value, // undefined
-      isDependProduct, // null
-      productId, // 4003
-    } = item;
-    const inc = validateInputCount(value, isAdd, key);
-    const newOrder = {
-      typeProduct,
-      itemId,
-      inc: isDependProduct ? isAdd : inc, // inc
-      counter: key,
-      isDependProduct,
-      productId,
-    };
-    setEditStatus();
-    orderChange(newOrder);
-    getOrderPaymentInfo();
-  };
 
   // get card for each order item
   const getCard = (item) => {

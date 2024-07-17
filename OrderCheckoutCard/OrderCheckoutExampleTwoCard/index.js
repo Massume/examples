@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import bem from 'src/utils/bem';
+import bem from '../utils/bem';
 
 // store
 import {connect} from "react-redux";

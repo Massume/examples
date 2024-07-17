@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // utils
-import bem from 'src/utils/bem';
+import bem from '../../utils/bem';
 
 //components
 import EditButton from "../EditButton";

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { connect } from 'react-redux';
 
 // utils
-import bem from 'src/utils/bem';
+import bem from '../../utils/bem';
 import generateRotateStyle from 'src/utils/generateRotateStyle';
 
 // selectors

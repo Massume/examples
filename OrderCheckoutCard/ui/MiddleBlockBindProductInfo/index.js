@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import bem from 'src/utils/bem';
-import styles from './index.module.scss';
+
+// components
 import LeftCardSide from "../LeftCardSide";
 import CardTitleBlock from "../CardTitleBlock";
 import DeleteOrderItemBlock from "../DeleteOrderItemBlock";
 import MiddleBlockMainProductInfo from "../MiddleBlockMainProductInfo";
 import MiddleBlockMainProductArtInfo from "../MiddleBlockMainProductArtInfo";
 import EditButton from "../EditButton";
+
+// utils
+import bem from '../../utils/bem';
+
+// styles
+import styles from './index.module.scss';
 
 const b = bem('middle-block-bind-product-info', styles);
 

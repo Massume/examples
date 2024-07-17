@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // utils
-import bem from 'src/utils/bem';
+import bem from '../../utils/bem';
 import convertToPrice from "src/utils/convertToPrice";
 
-// compoennts
+// components
 import BeforeAfterPrice from "src/elements/BeforeAfterPrice";
 
 // styles
